@@ -1,0 +1,6 @@
+<h1>Book Parking at {{ parking_space.location.name }} - Slot: {{ parking_space.slot_number }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Parking</button>
+</form>

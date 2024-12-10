@@ -1,0 +1,7 @@
+<h1>Available Parking Spaces</h1>
+{% for space in available_spaces %}
+    <div>
+        <p>{{ space.location.name }} - Slot: {{ space.slot_number }} - KSh {{ space.price_per_hour }} / hour</p>
+        <a href="{% url 'book_parking' space.id %}">Book Now</a>
+    </div>
+{% endfor %}
